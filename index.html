@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="invoice-container">
+        <h1>Invoice Creator</h1>
+        <label for="shopName">Shop Name:</label>
+        <input type="text" id="shopName" placeholder="Enter shop name">
+
+        <label for="shopNumber">Shop Number:</label>
+        <input type="text" id="shopNumber" placeholder="Enter shop number">
+
+        <hr>
+
+        <div id="items-container">
+            <div class="item">
+                <label for="itemName">Item Name:</label>
+                <input type="text" class="item-name" placeholder="Enter item name">
+
+                <label for="itemPrice">Item Price:</label>
+                <input type="number" class="item-price" placeholder="Enter item price">
+
+                <label for="itemQuantity">Item Quantity:</label>
+                <input type="number" class="item-quantity" placeholder="Enter item quantity">
+            </div>
+        </div>
+
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="generateInvoice()">Generate Invoice</button>
+
+        <div id="invoice-preview">
+            <h2>Invoice</h2>
+            <div id="shop-info">
+                <p id="shop-name-preview"></p>
+                <p id="shop-number-preview"></p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-items-preview"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
